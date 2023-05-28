@@ -1,5 +1,10 @@
+// Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. 
+// The dotenv package is a great way to keep passwords, API keys, and other sensitive data out of your code. 
+// It allows you to create environment variables in a . env file instead of putting them in your code.
+// HOWEVER! YOU CANNOT USE NPM modules on the browser!!! It generates an error when using the require function.
 // require('dotenv').config() 
 
+// Our main function definition
 const fetchPokemonData = (pokemonName)=> {
   return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`) //Perform a fetch to the API. (Javascript returns a promise for us.)
   //Once the fetch is complete and the first promise is resolved, check if there was an error and then parse the JSON data.
@@ -52,6 +57,8 @@ const pokemonBattle = (pokemon1, pokemon2) => {
   let baseExperiencePokemon2 = pokemon2.base_experience;
 
   if (baseExperiencePokemon1 > baseExperiencePokemon2) {
+    // Assign the victor class to whichever pokemon wins. 
+    // The victor class has preset styling which will place a green border around the pokemons div.
     document.getElementById('pokemon-0').classList.add('victor')
   }
   else {
