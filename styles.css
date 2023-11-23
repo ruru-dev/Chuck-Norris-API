@@ -1,6 +1,9 @@
 #content-main {
- width: 800px;
- margin: 0 auto;
+ width: 1000px;
+ padding: 50px;
+ margin: 100px auto;
+ background-color: rgb(201, 243, 218);
+ border-radius: 20px;
 }
 
 #main-title {
